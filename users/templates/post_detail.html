@@ -1,0 +1,18 @@
+<!-- templates/post_detail.html -->
+{% extends 'base.html' %} {% block content %}
+<div class="post-entry">
+    <h2>{{ object.message }}</h2>
+    <p>Author: {{ object.author }}</p>
+    <p>{{ object.date }}</p>
+</div>
+
+<p>
+    <a href="{% url 'post_edit' post.pk %}">Edit</a> |
+    <a href="{% url 'post_de\
+lete' post.pk %}">Delete</a>
+</p>
+
+
+<p>Back to
+    <a href="{% url 'post_list' %}">All Messages</a>.</p>
+{% endblock content %}
